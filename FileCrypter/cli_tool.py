@@ -1,5 +1,5 @@
 import os
-from encrypt_decrypt import encrypt_file, decrypt_file, get_key, change_key
+from .encrypt_decrypt import encrypt_file, decrypt_file, get_key, change_key
 from pathlib import Path
 import subprocess
 
