@@ -5,7 +5,7 @@ import subprocess
 
 
 def main():
-    #cd(Path.home())
+    cd(Path.home())
     create_app_data_folder()
     while True:
         command = get_command_from_user()

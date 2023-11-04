@@ -19,4 +19,4 @@ dependencies = [
 ]
 
 [project.scripts]
-filecrypter = "filecrypter.__main__:main"
+filecrypter = "filecrypter.main:main"
