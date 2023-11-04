@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "filecrypter"
+version = "0.0.1"
+authors = [
+    {name = "Krzysztof Murawski", email = "murek.krzys@gmail.com"},
+]
+description = "Simple CLI file encryption tool"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "requests",
+    'importlib-metadata; python_version<"3.8"',
+	"cryptography"
+]
+
+[project.scripts]
+filecrypter = "filecrypter.__main__:main"
