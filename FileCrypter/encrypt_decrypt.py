@@ -19,7 +19,6 @@ def encrypt_file(path) -> None:
     with open(path, "wb") as plain_file:
         plain_file.write(encrypted_text)
 
-
 def decrypt_file(path) -> None:
     with open(path, "rb") as encrypted_file:
         encrypted_text = encrypted_file.read()

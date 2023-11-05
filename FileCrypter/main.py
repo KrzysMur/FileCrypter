@@ -1,11 +1,11 @@
-import os
+import os, sys
 from .encrypt_decrypt import encrypt_file, decrypt_file, get_key, change_key
+from .directory_encryption import encrypt_directory, decrypt_directory
 from pathlib import Path
 import subprocess
 
 
 def main():
-    cd(Path.home())
     create_app_data_folder()
     while True:
         command = get_command_from_user()
@@ -19,8 +19,8 @@ def get_command_from_user():
 def process_command(command):
     match command.split():
         case ["quit"]:
-            print("Quitting the program")
             quit()
+            print("Quitting the program")
         case ["encrypt", filename]:
             encrypt(filename)
         case ["decrypt", filename]:
@@ -33,6 +33,10 @@ def process_command(command):
             print(os.getcwd())
         case ["chkey"]:
             change_key()
+        case ["encryptdir", directory]:
+            encrypt_directory(directory)
+        case ["decryptdir", directory]:
+            decrypt_directory(directory)
         case _:
             print("command not recognized")
 
