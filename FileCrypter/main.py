@@ -35,8 +35,13 @@ def process_command(command):
             change_key()
         case ["encryptdir", directory]:
             encrypt_directory(directory)
+        case ["encryptdir", directory, "-d"]:
+            if input("This operation may cause damage to your system. Continue? (y/n)  ").lower() == 'y':
+                encrypt_directory(directory, deep=True)
         case ["decryptdir", directory]:
             decrypt_directory(directory)
+        case ["decryptdir", directory, "-d"]:
+            decrypt_directory(directory, deep=True)
         case _:
             print("command not recognized")
 

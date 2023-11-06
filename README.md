@@ -41,3 +41,5 @@ After installing the package on your device `filecrypter` cmd command is availab
  - `cd [path]` - changes cwd to path
  - `pwd` - prints working directory
  - `chkey` - changes key; prompts to confirm operation
+- `encryptdir [dir] [flag]` - encrypts directory dir; optional flag "-d" encrypts all subdirectorys of dir
+- `decryptdir [dir] [flag]` - decrypts directory dir; optional flag "-d" decrypts all subdirectorys of dir
